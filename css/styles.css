@@ -1,0 +1,302 @@
+body {
+  font-family: "Work Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #0e0c1d;
+}
+
+.background .relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.background .absolute {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+}
+
+.background .left {
+  bottom: 0;
+  left: -20%;
+  right: 0;
+  top: -10%;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(255, 0, 182, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.background .right {
+  bottom: 0;
+  right: -20%;
+  top: -10%;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(255, 0, 182, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px 60px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.static_text {
+  color: #aab3f7;
+  font-weight: 400;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.neon-text {
+  font-weight: 700;
+  color: #daddfa;
+  text-shadow: 0px 0px 9px #726ae8cc, 0px 0px 18px #aab3f7cc;
+}
+
+h2 {
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+h3 {
+  font-weight: 500;
+  color: #cacaca;
+}
+
+.film_title {
+  color: #cacaca;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 620px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.film {
+  max-width: 580px;
+}
+.film p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  font-weight: 300;
+  text-wrap: balance;
+}
+
+.translation_note {
+  font-size: 0.8em;
+  color: #aab3f7;
+  font-style: italic;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next_film__header {
+  margin-top: 15px;
+  color: #cacaca;
+  font-weight: 500;
+  text-shadow: 0px 0px 9px #726ae8cc;
+}
+
+.next_film .film_title {
+  color: #cacaca;
+  font-weight: bold;
+}
+
+details {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+details:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+details img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  border-radius: 5px;
+  margin: 15px auto;
+  display: block;
+}
+details p {
+  text-align: center;
+  text-wrap: balance;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #daddfa;
+}
+
+.days_until {
+  color: #aab3f7;
+  font-weight: 600;
+}
+.summary__days_until {
+  display: none;
+  color: #aab3f7;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+footer {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #aab3f7;
+  font-weight: 600;
+}
+footer a:hover {
+  filter: drop-shadow(0 0 8px #aab3f7);
+}
+
+.socialmedia__icons {
+  margin: 5px 0;
+}
+
+.socialmedia__icons a {
+  margin: 0 10px;
+}
+
+/* ------- RESPONSIVE ------- */
+
+/* Para pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px 20px;
+  }
+
+  .film, .next_film, p {
+    text-align: left;
+    text-wrap: pretty;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-wrap: balance;
+  }
+
+  .translation_note {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .film, .next_film {
+    width: 100%;
+  }
+
+  img {
+    max-height: 400px;
+  }
+
+  footer p {
+    text-align: center;
+  }
+}
+
+/* Para tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 15px 30px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .film, .next_film {
+    width: 90%;
+  }
+}
+
+/* Para pantallas medianas */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* Ajustes generales para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .background .absolute {
+    height: 300px;
+    width: 300px;
+  }
+
+  .neon-text {
+    text-shadow: 0px 0px 5px #726ae8cc, 0px 0px 10px #aab3f7cc;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+}
